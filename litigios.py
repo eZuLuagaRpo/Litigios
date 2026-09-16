@@ -110,7 +110,7 @@ fields = list(dict_fields.keys())                                               
 
 valid_values = {
     fields[1]: ['COMERCIALES', 'HIPOTECARIOS', 'LABORALES'],                    # LITIGIO
-    fields[2]: ['BANCOLOMBIA', 'BANCA DE INVERSION', 'FIDUCIARIA', 'VALORES', 'NEQUI'], # SOCIEDAD
+    fields[2]: sociedades['SOCIEDAD'].dropna().unique().tolist(),                # SOCIEDAD - tomado de Contabilidad.xlsx > SOCIEDADES
     fields[17]: ['REMOTA', 'EVENTUAL', 'PROBABLE', 'EVENTUAL CON PROVISION'],   # CALIFICACION_CONTINGENCIA
     fields[18]: ['NUEVO', 'EXISTIA'],                                           # PROCESO_NUEVO_EXISTIA
     fields[19]: ['VIGENTE', 'TERMINADO']                                        # PROCESO_VIGENTE_TERMINADO
